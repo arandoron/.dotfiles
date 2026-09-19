@@ -51,7 +51,7 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "vsicons.dontShowNewVersionMessage": true,
-  "cSpell.userWords": ["schweigerjonas"],
+  "cSpell.userWords": ["arandoron"],
   "prettier.configPath": ".prettierrc",
   "cSpell.language": "en,de",
   "redhat.telemetry.enabled": false,
@@ -61,3 +61,4 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
+
