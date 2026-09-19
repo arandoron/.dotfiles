@@ -39,7 +39,7 @@ Various configuration files.
 Clone the repository:
 
 ```sh
-git clone git@github.com:schweigerjonas/.dotfiles.git
+git clone git@github.com:arandoron/.dotfiles.git
 cd .dotfiles
 ```
 
