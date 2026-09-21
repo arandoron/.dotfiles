@@ -11,6 +11,7 @@ return {
         "sql",
         "javascript",
         "typescript",
+        "html",
         "css",
         "scss",
         "svelte",

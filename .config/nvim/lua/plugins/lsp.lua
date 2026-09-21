@@ -52,6 +52,7 @@ return {
         marksman = {},
         dockerls = {},
         docker_compose_language_service = {},
+        html = {},
       },
     },
   },
