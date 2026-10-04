@@ -116,6 +116,9 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # Flatpak launchers
 export PATH="$PATH:/var/lib/flatpak/exports/bin"
 
+# Typst compiler installation
+export PATH="$PATH:/usr/local/typst"
+
 # Golang installation
 export PATH="$PATH:/usr/local/go/bin"
 
