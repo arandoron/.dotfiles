@@ -3,25 +3,29 @@ general {
     interval = 5
 }
 
+order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "memory"
-order += "battery all"
+order += "disk /"
 order += "wireless _first_"
 order += "ethernet _first_"
-order += "volume master"
+order += "battery all"
 order += "tztime local"
+
+cpu_temperature 0 {
+  format = "Temp: %degrees °C"
+}
 
 cpu_usage {
     format = "CPU: %usage"
 }
 
 memory {
-    format = "RAM: %used / %total"
+    format = "RAM: %used"
 }
 
-battery all {
-    format = "BAT: %percentage %status"
-    path = "/sys/class/power_supply/BAT%d/uevent"
+disk "/" {
+    format = "/: %avail"
 }
 
 wireless _first_ {
@@ -30,15 +34,16 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-    format_up = "E: online"
-    format_down = "E: offline"
+    format_up = "E: up"
+    format_down = "E: down"
 }
 
-volume master {
-    format = "VOL: %volume"
-    device = "pulse"
+battery all {
+    format = "BAT: %percentage %status"
+    status_bat = ""
+    path = "/sys/class/power_supply/BAT%d/uevent"
 }
 
 tztime local {
-    format = "%a %d, %b %H:%M"
+    format = " %a %d, %H:%M"
 }

@@ -222,9 +222,7 @@ bar {
     status_command i3status
 
     # remove system tray icons (e.g. bluetooth, update manager)
-    tray_output none
-
-    position bottom
+    # tray_output none
 }
 
 # Add gaps between windows/containers
