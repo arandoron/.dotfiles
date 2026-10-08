@@ -232,5 +232,9 @@ gaps inner 7px
 exec --no-startup-id i3-msg "workspace $ws1; exec firefox"
 exec --no-startup-id i3-msg "workspace $ws2; exec kitty"
 
-# Automatically apply monitor settings on refresh
-# exec_always --no-startup-id ~/.config/i3/scripts/monitor
+# setup workspaces and monitors
+# TODO: potentially change order in which workspaces are moved so that I don't have to move from the
+# highest workspaces per monitor back to the ones with actual applications in them (like ws10 or ws5)
+bindsym $mod+Shift+m exec --no-startup-id ~/.config/i3/scripts/home-setup.sh
+bindsym $mod+shift+d exec --no-startup-id ~/.config/i3/scripts/laptop-setup.sh
+# bindsym $mod+shift+p exec --no-startup-id "./scripts/presentation-setup.sh"
