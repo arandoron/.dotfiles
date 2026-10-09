@@ -125,6 +125,11 @@ export PATH="$PATH:/usr/local/go/bin"
 # Go binaries
 export PATH="$PATH:$HOME/go/bin"
 
+# Java development environment
+export JAVA_HOME=/opt/jdk-27
+export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="/opt/apache-maven-3.10.0/bin:$PATH"
+
 # Path for custom symlinks and installations
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -164,3 +169,7 @@ source <(ng completion script)
 # Customize prompt string
 export PS1='\[\e[1m\]\[\e[92m\]\u@\h:\[\e[94m\]\w\[\e[91m\]$(__git_ps1)\[\e[0m\]\$ '
 . "$HOME/.cargo/env"
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
