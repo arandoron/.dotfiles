@@ -232,6 +232,9 @@ gaps inner 7px
 exec --no-startup-id i3-msg "workspace $ws1; exec firefox"
 exec --no-startup-id i3-msg "workspace $ws2; exec kitty"
 
+# Autostart script for battery notification
+exec --no-startup-id ~/.config/i3/scripts/i3-battery-popup.sh -n -D -L 20 -l 5 -t "3m"
+
 # setup workspaces and monitors
 # TODO: potentially change order in which workspaces are moved so that I don't have to move from the
 # highest workspaces per monitor back to the ones with actual applications in them (like ws10 or ws5)
