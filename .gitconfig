@@ -1,0 +1,11 @@
+[user]
+	name = Jonas Schweiger
+	email = jonas.schweiger@outlook.de
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[pull]
+	rebase = false
+[core]
+	editor = nvim
