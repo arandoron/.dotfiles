@@ -110,37 +110,39 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Neovim installation
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
 # Flatpak launchers
 export PATH="$PATH:/var/lib/flatpak/exports/bin"
 
-# Typst compiler installation
+# Neovim installation
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# Typst compiler
 export PATH="$PATH:/usr/local/typst"
 
-# Golang installation
+# Go installation and binaries
 export PATH="$PATH:/usr/local/go/bin"
-
-# Go binaries
 export PATH="$PATH:$HOME/go/bin"
 
 # Java development environment
 export JAVA_HOME=/opt/jdk-27
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="/opt/apache-maven-3.10.0/bin:$PATH"
+export PATH="$HOME/.jbang/bin:$PATH"
 
-# Path for custom symlinks and installations
+# Custom symlinks and installations
 export PATH="$HOME/.local/bin:$PATH"
 
-# Path for utility scripts
+# Utility scripts
 export PATH="$HOME/.config/scripts:$PATH"
 
-# Path for thirdparty applications
+# Thirdparty applications
 export PATH="$HOME/thirdparty:$PATH"
 
-# TeX Live installation
+# TeXLive installation
 export PATH="/usr/local/texlive/2026/bin/x86_64-linux:$PATH"
+
+# Cargo
+. "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
@@ -165,8 +167,3 @@ function fzm() {
 
 # Customize prompt string
 export PS1='\[\e[1m\]\[\e[92m\]\u@\h:\[\e[94m\]\w\[\e[91m\]$(__git_ps1)\[\e[0m\]\$ '
-. "$HOME/.cargo/env"
-
-# Add JBang to environment
-alias j!=jbang
-export PATH="$HOME/.jbang/bin:$PATH"

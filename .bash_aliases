@@ -17,3 +17,6 @@ alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
+
+# JBang
+alias j!=jbang
