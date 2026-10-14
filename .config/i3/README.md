@@ -1,3 +1,12 @@
+### Setup
+
+Setting the correct variables for the used device can be done by creating a symlink with the
+device-specific config:
+
+```sh
+ln -s devices/[DEVICE_NAME].conf ~/.config/i3/devices/output.conf
+```
+
 ### Packages and Scripts
 
 ##### Packages

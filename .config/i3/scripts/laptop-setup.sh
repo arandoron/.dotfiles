@@ -1,9 +1,11 @@
 #!/bin/bash
 
 if [[ $(hostname) == "trollshaws" ]]; then
+  # T480
   OUTPUT_DISPLAY="eDP-1"
-else
-  OUTPUT_DISPLAY="eDP-1"
+elif [[ $(hostname) == "fangorn" ]]; then
+  # T14
+  OUTPUT_DISPLAY="eDP"
 fi
 
 xrandr --auto
