@@ -13,6 +13,19 @@ return {
         },
       })
 
+      -- stop message spam when editing java files
+      -- topic discussion: https://github.com/LazyVim/LazyVim/discussions/1439
+      table.insert(opts.routes, {
+        filter = {
+          event = "lsp",
+          kind = "progress",
+          find = "jdtls",
+        },
+        opts = {
+          skip = true,
+        },
+      })
+
       -- class command line instead of pop-up
       opts.cmdline = {
         view = "cmdline",
