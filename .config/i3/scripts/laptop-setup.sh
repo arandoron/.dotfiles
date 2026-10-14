@@ -1,6 +1,10 @@
 #!/bin/bash
 
-OUTPUT_DISPLAY="eDP-1"
+if [[ $(hostname) == "trollshaws" ]]; then
+  OUTPUT_DISPLAY="eDP-1"
+else
+  OUTPUT_DISPLAY="eDP-1"
+fi
 
 xrandr --auto
 
