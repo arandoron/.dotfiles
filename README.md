@@ -16,6 +16,7 @@ Various configuration files.
 - [keyd](https://github.com/rvaiya/keyd) keyboard remappings
 - [zathura](https://pwmt.org/projects/zathura/) config
 - [rclone](https://github.com/rclone/rclone) config example
+- [ideavim](https://github.com/JetBrains/ideavim) LazyVim keybinds for IntelliJ (based on [this config](https://github.com/cufarvid/lazy-idea))
 
 ### Dependencies
 
