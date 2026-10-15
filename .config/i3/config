@@ -131,8 +131,13 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $laptop_screen "eDP-1"
-set $external_monitor "DP-1"
+# default values for T14 output names, they should get overwritten if another device is used through the
+# configuration included beneath
+set $laptop_screen "eDP"
+set $external_monitor "DisplayPort-1"
+
+# device specific variables
+include ~/.config/i3/output.conf
 
 # assign workspaces to monitors
 workspace $ws1 output $external_monitor
