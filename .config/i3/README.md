@@ -14,6 +14,7 @@ ln -s devices/[DEVICE_NAME].conf ~/.config/i3/devices/output.conf
 - [flameshot](https://github.com/flameshot-org/flameshot) - Screenshot software.
 - [pulsectl](https://github.com/mk-fg/python-pulse-control) - Interface and bindings for PulseAudio.
 - [rofi](https://github.com/davatorium/rofi) - Application launcher.
+- [light-locker](https://github.com/the-cavalry/light-locker) - Session-locker.
 
 ##### Scripts
 
