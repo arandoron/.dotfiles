@@ -1,0 +1,54 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
+# fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# manage PATH more cleanly
+path_prepend() {
+  if [[ ! -z "$2" ]] || [[ "$PATH" != *"$1"* ]]; then
+    export PATH=$1:$PATH
+  fi
+}
+path_append() {
+  if [[ "$PATH" != *"$1"* ]]; then
+    export PATH=$PATH:$1
+  fi
+}
+
+path_append /opt/nvim-linux-x86_64/bin
+path_append /usr/local/typst
+
+# Go
+path_append /usr/local/go/bin
+path_append $HOME/go/bin
+
+# Cargo
+path_append $HOME/.cargo/env
+
+# Java
+export JAVA_HOME=/opt/jdk-27
+path_prepend $JAVA_HOME/bin
+path_prepend /opt/apache-maven-3.10.0/bin
+path_prepend $HOME/.jbang/bin
+
+# nvm
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# TeXLive
+path_prepend /usr/local/texlive/2026/bin/x86_64-linux
+
+# Custom symlinks and installations
+path_prepend $HOME/.local/bin
+
+# Thirdparty applications
+path_prepend $HOME/thirdparty
+
+PROMPT="%{$fg_bold[green]%}%n@%m %{$fg_bold[blue]%}%c%{$reset_color%}"
+PROMPT+=' $(git_prompt_info)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[red](%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY=") %{$fg[yellow]%}%1{✗%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=")"
