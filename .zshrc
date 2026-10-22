@@ -105,4 +105,26 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zsh_profile
+
+PROMPT="%{$fg_bold[green]%}%n@%m %{$fg_bold[blue]%}%c%{$reset_color%}"
+PROMPT+=' $(git_prompt_info)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[red](%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY=") %{$fg[yellow]%}%1{✗%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=")"
+
+# fzf key bindings and fuzzy completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
+
+export FZF_DEFAULT_OPTS='-i --layout=reverse --border --height=40%'
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+[ -f "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
+
+# Alias definitions
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi

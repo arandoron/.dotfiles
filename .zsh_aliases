@@ -1,0 +1,17 @@
+alias vim="nvim"
+alias vi="nvim"
+
+# ask for confirmation before deleting multiple files (> 3)
+alias rm="rm -I"
+
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+
+# Pomodoro script
+alias wo="pomodoro 'work'"
+alias br="pomodoro 'break'"
+
+# JBang
+alias j!=jbang
