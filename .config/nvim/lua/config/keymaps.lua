@@ -23,6 +23,9 @@ keymap.set("n", "<leader>pd", "<CMD>Oil<CR>", {
   desc = "Open parent directory",
 })
 
+-- Paste without overwriting clipboard
+keymap.set("x", "<leader>p", [["_dP]])
+
 -- Center search results when moving between them
 keymap.set("n", "n", "nzzzv", { desc = "Next search result centered" })
 keymap.set("n", "N", "Nzzzv", { desc = "Previous search result centered" })
