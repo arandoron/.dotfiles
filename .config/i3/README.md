@@ -4,7 +4,7 @@ Setting the correct variables for the used device can be done by creating a syml
 device-specific config:
 
 ```sh
-ln -s devices/[DEVICE_NAME].conf ~/.config/i3/devices/output.conf
+ln -s devices/[DEVICE_NAME].conf ~/.config/i3/output.conf
 ```
 
 ### Packages and Scripts
