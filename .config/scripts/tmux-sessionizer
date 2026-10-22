@@ -19,6 +19,11 @@ else
   [[ $selected ]] && selected="$HOME/$selected"
 fi
 
+# solves issue with displaying directory tail in zsh PROMPT by removing trailing "/"
+while [[ "$selected" != "/" && "$selected" == */ ]]; do
+  selected="${selected%/}"
+done
+
 if [[ -z $selected ]]; then
   exit 0
 fi
