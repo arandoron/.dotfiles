@@ -157,15 +157,5 @@ export NVM_DIR="$HOME/.config/nvm"
 export FZF_DEFAULT_COMMAND='find . -type f ! -path "*git*"'
 export FZF_DEFAULT_OPTS='-i --height=50%'
 
-# Create list of directories and change into selected
-function fzd() {
-  cd "$(find . -type d | fzf)"
-}
-
-# Create list of files and open it in nvim
-function fzm() {
-  vim "$(find -type f | fzf -m)"
-}
-
 # Customize prompt string
 export PS1='\[\e[1m\]\[\e[92m\]\u@\h:\[\e[94m\]\w\[\e[91m\]$(__git_ps1)\[\e[0m\]\$ '
