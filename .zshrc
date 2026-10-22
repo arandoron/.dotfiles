@@ -106,12 +106,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-PROMPT="%{$fg_bold[green]%}%n@%m %{$fg_bold[blue]%}%c%{$reset_color%}"
-PROMPT+=' $(git_prompt_info)'
+PROMPT="%{$fg_bold[magenta]%}%n@%m %{$fg_bold[blue]%}%c%{$reset_color%}"
+PROMPT+=' $(git_prompt_info)$ '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[red](%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY=") %{$fg[yellow]%}%1{✗%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[yellow]%}%1{\ueabc%}%{$fg_bold[red]%})"
 ZSH_THEME_GIT_PROMPT_CLEAN=")"
 
 # fzf key bindings and fuzzy completion
