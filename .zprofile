@@ -31,4 +31,3 @@ path_prepend $HOME/.jbang/bin
 path_prepend /usr/local/texlive/2026/bin/x86_64-linux
 path_prepend $HOME/.local/bin
 path_prepend $HOME/.config/scripts
-path_prepend $HOME/thirdparty

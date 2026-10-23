@@ -135,9 +135,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # Utility scripts
 export PATH="$HOME/.config/scripts:$PATH"
 
-# Thirdparty applications
-export PATH="$HOME/thirdparty:$PATH"
-
 # TeXLive installation
 export PATH="/usr/local/texlive/2026/bin/x86_64-linux:$PATH"
 
