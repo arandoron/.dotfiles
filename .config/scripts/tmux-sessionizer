@@ -6,6 +6,7 @@ DIRS=(
   "$HOME/dev"
   "$HOME/dev/.dotfiles"
   "$HOME/dev/.dotfiles/.config"
+  "$HOME/dev/dynamics"
   "$HOME/"
 )
 
