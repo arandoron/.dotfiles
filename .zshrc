@@ -124,6 +124,8 @@ export FZF_DEFAULT_OPTS='-i --layout=reverse --height=40%'
 
 [ -f "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
 
+source ~/.zprofile
+
 # Alias definitions
 if [ -f ~/.zsh_aliases ]; then
   . ~/.zsh_aliases
