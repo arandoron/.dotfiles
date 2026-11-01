@@ -1,6 +1,11 @@
 export XDG_CONFIG_HOME=$HOME/.config
 export NVM_DIR=$HOME/.config/nvm
 
+# tuxedo
+export TODO_DIR=$HOME/Documents/todo
+export TODO_FILE=$TODO_DIR/todo.txt
+export DONE_FILE=$TODO_DIR/done.txt
+
 # manage PATH
 # ensure unique PATH entries
 typeset -U path PATH
