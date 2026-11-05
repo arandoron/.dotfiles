@@ -131,3 +131,8 @@ source ~/.zprofile
 if [ -f ~/.zsh_aliases ]; then
   . ~/.zsh_aliases
 fi
+
+# launch tmux session on opening terminal
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
