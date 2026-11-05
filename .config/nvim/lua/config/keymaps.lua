@@ -23,6 +23,9 @@ keymap.set("n", "<leader>pd", "<CMD>Oil<CR>", {
   desc = "Open parent directory",
 })
 
+-- Open tuxedo
+keymap.set("n", "<leader>to", "<CMD>Tuxedo<CR>", opts)
+
 -- Paste without overwriting clipboard
 keymap.set("x", "<leader>p", [["_dP]])
 
