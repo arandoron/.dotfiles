@@ -12,6 +12,7 @@ return {
         "tailwindcss-language-server",
         "clangd",
         "gopls",
+        "ols",
         "tinymist",
         "typstyle",
         "markdownlint-cli2",
@@ -25,6 +26,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        ols = {},
         tinymist = {
           keys = {
             {
